@@ -141,14 +141,8 @@ def update_database():
             if not videos.objects.filter(name=data["name"]).exists():
                 photoUrl = data["iconUri"]
                 icon_name = photoUrl.rsplit("/", 1)[-1]
-                photoname = (
-                    os.path.abspath(os.curdir)
-                    + "\\static\\images\\"
-                    + icon_name
-                )
-                pictures_list = os.listdir(
-                    os.path.abspath(os.curdir) + "\\static\\images\\"
-                )
+                photoname = ("\\static\\images\\" + icon_name)
+                pictures_list = os.listdir("\\static\\images\\")
                 if not icon_name in pictures_list:
                     try:
                         urllib.request.urlretrieve(photoUrl, photoname)

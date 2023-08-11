@@ -1,3 +1,8 @@
 from django.contrib import admin
+from .models import *
 
-# Register your models here.
+admin.site.register(User)
+admin.site.register(videos)
+admin.site.register(tracks)
+admin.site.register(appMetadata)
+admin.site.register(storedContent)

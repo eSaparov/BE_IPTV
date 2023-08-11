@@ -140,3 +140,7 @@ class videos(models.Model):
     storedProgress = models.PositiveIntegerField(blank=True, null=True)
     storedContent = models.ForeignKey(storedContent, on_delete=models.CASCADE, blank=True, null=True)
 
+    class Meta:
+        verbose_name = "Video"
+        verbose_name_plural = "Videa"
+
