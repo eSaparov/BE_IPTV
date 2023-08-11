@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block style %}
+{% endblock %}
+{% block content %}
+    <div class="container bg bg-white">
+
+    <div class="container-fliud">
+    <div class="wrapper row">
+    <div class="preview col-6">
+
+    </div>
+    <div class="details col-10">
+        <h1>Nazev Videa: {{ object.name }}</h1>
+        <img src="{{ object.iconFile.url }}" width={{ width }} height={{ height }}>
+        <br>
+        <div style="margin-left:20px;margin-top:20px">
+            <a class="btn btn-secondary" onClick="javascript:history.go(-1);">Zpet</a>
+        </div>
+
+    </div>
+
+    </div>
+{% endblock %}
